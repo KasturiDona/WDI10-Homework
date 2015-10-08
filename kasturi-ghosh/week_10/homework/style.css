@@ -1,8 +1,22 @@
+body {
+	padding: 20px;
+}
+
+.random_color {
+	height: 400px;
+}
+.controls {
+	margin: 0 auto;
+	text-align: center;
+}
 .palette {
+	top: 30px;
+	padding: 20px;
 	text-align: center;
 	font-size: 3em;
 }
 .rgb_palette {
+	padding: 20px;
 	text-align: center;
 	font-size: 3em;
 }

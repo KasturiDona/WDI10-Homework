@@ -22,6 +22,15 @@ var hexToRgb = {
 	}
 };
 
+var randomColor = function () {
+	var color = '#' + Math.random().toString(16).substring(2, 8);
+	document.bgColor = color;
+	// changes the value on the color pickert too
+	$('#color').val(color);
+	$('.palette').text("hex: " + color);
+	$('.rgb_palette').text("rgb: " + hexToRgb.converter(color));
+}
+
 var addColor = function () {
 	var $color = $( '#color' );
 	var color = $color.val();
@@ -31,5 +40,9 @@ var addColor = function () {
 };
 
 $( document ).ready( function () {
-	$( '#add_color' ).on( 'click', addColor );
+	// the addColor allows user to select a specific color from the color picker
+	$( '#add_color' ).on( 'click', addColor ); 
+	// random color generation on mouseover
+	$( '.random_color' ).on('mouseover', randomColor);
 });
+ 
