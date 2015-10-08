@@ -43,6 +43,6 @@ $( document ).ready( function () {
 	// the addColor allows user to select a specific color from the color picker
 	$( '#add_color' ).on( 'click', addColor ); 
 	// random color generation on mouseover
-	$( '.random_color' ).on('mouseover', randomColor);
+	$( '.random_color' ).on('mousemove', randomColor);
 });
  
